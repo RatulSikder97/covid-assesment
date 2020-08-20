@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* ======================== */
+/* Header Style */
+/* ======================== */
+
+header {
+  background: #11b26d;
+  display: flex;
+  height: 6rem;
+  width: 100%;
+  text-transform: capitalize;
+}
+
+.logo {
+  height: 100%;
+  padding: 0.5rem 2rem;
+}
+
+.logo img {
+  height: 100%;
+}
+
+h1 {
+  margin: 1rem 0;
+}
