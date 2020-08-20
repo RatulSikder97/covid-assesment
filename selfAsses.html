@@ -65,7 +65,7 @@
 
                     <!-- temp radio -->
                     <div class="temp-scale">
-                        <input type="radio" name="scale" id="c" value="c">
+                        <input type="radio" name="scale" id="c" value="c" checked="checked">
                         <label for="c">°C</label>
                         <input type="radio" name="scale" id="f" value="f">
                         <label for="f">°F</label>
@@ -76,8 +76,90 @@
 
             <!-- Symptoms -->
             <div class="symptoms tab">
-                <h3>kjaisdfjlkasjdklf</h3>
+                <div class="form-header">
+                    <h3>Main Symptoms</h3>
+                    <p>Select the matched symptoms from following symptoms list </p>
+                </div>
+                <div class="input-container">
+                    <div class="check-box">
+                        <input type="checkbox" name="symptoms" id="breath-prob">
+                        <label for="breath-prob">Breathing Problem</label>
+
+                    </div>
+
+                    <div class="check-box">
+                        <input type="checkbox" name="symptoms" id="dry-cough">
+                        <label for="dry-cough">Dry Cough</label>
+                    </div>
+
+                    <div class="check-box">
+                        <input type="checkbox" name="symptoms" id="sore-throat">
+                        <label for="sore-throat">Sore Throat</label>
+                    </div>
+
+                    <div class="check-box">
+                        <input type="checkbox" name="symptoms" id="weekness">
+                        <label for="weekness">Weekness</label>
+                    </div>
+
+                    <div class="check-box">
+                        <input type="checkbox" name="symptoms" id="runny-nose">
+                        <label for="runny-nose">Runny Nose</label>
+                    </div>
+
+                </div>
+
             </div>
+
+            <!-- Additional Symptoms -->
+            <div class="symptoms tab">
+                <div class="form-header">
+                    <h3>Additional Information (Symptoms)</h3>
+                    <p>Select the matched additional symptoms from following symptoms list </p>
+                </div>
+                <div class="input-container">
+                    <div class="check-box">
+                        <input type="checkbox" name="ad-symptoms">
+                        <label>Abdominal Pain</label>
+                    </div>
+
+                    <div class="check-box">
+                        <input type="checkbox" name="ad-symptoms">
+                        <label>Vomiting</label>
+                    </div>
+
+                    <div class="check-box">
+                        <input type="checkbox" name="ad-symptoms">
+                        <label>Diarrhoea</label>
+                    </div>
+
+                    <div class="check-box">
+                        <input type="checkbox" name="ad-symptoms">
+                        <label>Chest pain or pressure</label>
+                    </div>
+
+                    <div class="check-box">
+                        <input type="checkbox" name="ad-symptoms">
+                        <label> Muscle pain</label>
+                    </div>
+
+                    <div class="check-box">
+                        <input type="checkbox" name="ad-symptoms">
+                        <label> Loss of taste or smell</label>
+                    </div>
+
+                    <div class="check-box">
+                        <input type="checkbox" name="ad-symptoms">
+                        <label> Rash on skin, or discoloration of fingers or toes</label>
+                    </div>
+
+                    <div class="check-box">
+                        <input type="checkbox" name="ad-symptoms">
+                        <label> Loss of speech or movement</label>
+                    </div>
+                </div>
+            </div>
+            <!-- Additiona symptions end -->
 
             <!-- Button -->
             <div class="btn-group" style="overflow:auto;">

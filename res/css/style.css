@@ -22,6 +22,10 @@ header {
   text-transform: capitalize;
   color: #fff;
 }
+.logo-link {
+  color: #000;
+  margin: 0rem;
+}
 
 .logo {
   height: 100%;
@@ -33,7 +37,11 @@ header {
 }
 
 header h1 {
-  margin: 1rem 0;
+  margin: 1rem 0rem;
+}
+
+header h1:hover {
+  color: #fdfdfd;
 }
 
 /* ================= */
@@ -116,7 +124,7 @@ header h1 {
 /* form style */
 /* =================== */
 #user-input-form {
-  height: 80%;
+  height: auto;
   width: 100%;
   display: inline-block;
   margin: 4rem auto;
@@ -168,6 +176,19 @@ header h1 {
   border: 0.1rem solid #000;
 }
 
+.input-container input[type="text"]:focus,
+.input-container input[type="number"]:focus {
+  border: none;
+  outline: none;
+  box-shadow: 0.2rem 0.2rem 0.4rem #4caf50, -0.2rem 0.2rem 0.4rem #4caf50,
+    0.2rem -0.2rem 0.4rem #4caf50, -0.2rem -0.2rem 0.4rem #4caf50;
+}
+
+.input-container input:hover {
+  border: none;
+  box-shadow: 0.2rem 0.2rem 0.4rem #4caf50, -0.2rem 0.2rem 0.4rem #4caf50,
+    0.2rem -0.2rem 0.4rem #4caf50, -0.2rem -0.2rem 0.4rem #4caf50;
+}
 .main-content select {
   display: block;
   height: 4rem;
@@ -192,6 +213,8 @@ header h1 {
 
 input.invalid {
   background-color: #ffdddd;
+  box-shadow: 0.2rem 0.2rem 0.4rem #ffdddd, -0.2rem 0.2rem 0.4rem #ffdddd,
+    0.2rem -0.2rem 0.4rem #ffdddd, -0.2rem -0.2rem 0.4rem #ffdddd;
 }
 
 button {
@@ -215,8 +238,20 @@ button:hover {
 
 .btn-group {
   margin-right: 2rem;
+  margin-bottom: 2rem;
 }
 
 .tab {
   display: none;
+  transition: 0.2s;
+}
+
+.symptoms label {
+  display: inline;
+  margin-left: 1.5rem;
+}
+
+.check-box {
+  margin: 2rem 0;
+  margin-left: 4rem;
 }
