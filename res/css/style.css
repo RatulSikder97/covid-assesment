@@ -49,7 +49,7 @@ header h1:hover {
 /* ================= */
 
 .main-content {
-  height: 85vh;
+  min-height: 85vh;
   background: #b7e4c7;
   text-align: center;
   padding: 0 10rem;
@@ -124,6 +124,7 @@ header h1:hover {
 /* form style */
 /* =================== */
 #user-input-form {
+  position: relative;
   height: auto;
   width: 100%;
   display: inline-block;
@@ -209,6 +210,48 @@ header h1:hover {
 
 .temp-scale label {
   display: inline-block;
+}
+
+/* inputconfirm section */
+#confirm-input {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(255, 255, 255);
+  z-index: 9999;
+  width: 80%;
+  padding: 0 2rem;
+  border-radius: 0.5rem;
+}
+#confirm-input ul {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+#confirm-input ul li {
+  display: flex;
+  justify-content: space-between;
+}
+#confirm-input p {
+  display: inline-block;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 input.invalid {
