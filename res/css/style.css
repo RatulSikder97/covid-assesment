@@ -15,7 +15,7 @@ html {
 /* ======================== */
 
 header {
-  background: #11b26d;
+  background: #99c1de;
   display: flex;
   height: 6rem;
   width: 100%;
@@ -33,4 +33,52 @@ header {
 
 h1 {
   margin: 1rem 0;
+}
+
+/* ================= */
+/* Main content style */
+/* ================= */
+
+.main-content {
+  height: 80vh;
+  background: #d2faf8;
+  text-align: center;
+  padding: 0 15rem;
+}
+
+.main-content h2 {
+  font-size: 3rem;
+}
+
+.main-content p {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 70%;
+}
+.btn {
+  display: inline-block;
+  font-size: 1.8rem;
+  color: #fff;
+  background: #0466c8;
+  padding: 1.6rem 2rem;
+  border-radius: 0.5rem;
+  margin-top: 5rem;
+}
+
+/* ==================== */
+/* footer */
+/* ==================== */
+
+.footer {
+  height: 20vh;
+  width: 100%;
+  background: #99c1de;
 }
