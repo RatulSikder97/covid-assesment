@@ -1,8 +1,10 @@
 let currentTab;
 let tab = document.getElementsByClassName("tab");
-
 let confirmCheck = document.querySelector("#confirm-input ul");
 
+let userData = {};
+
+let score = 0;
 window.onload = () => {
   currentTab = 0;
   showTab(currentTab);
@@ -11,7 +13,6 @@ window.onload = () => {
 function showTab(n) {
   let nextBtn = document.getElementById("nextBtn");
   if (n < tab.length) {
-    console.log(n);
     tab[n].style.display = "block";
   }
 
@@ -26,15 +27,16 @@ function showTab(n) {
 
 function nextPrev(n) {
   let modal = document.getElementById("myModal");
+  let form = document.getElementById("user-input-form");
   modal.style.display = "none";
   tab[currentTab].style.display = "none";
 
   currentTab = currentTab + n;
   // if you have reached the end of the form...
   if (currentTab == tab.length) {
-    // ... the form gets submitted:
-    document.getElementById("user-input-form").submit();
-    console.log("All are ok");
+    userData.score = score;
+    form.style.display = "none";
+    console.log(userData);
   } else if (currentTab < tab.length) {
     showTab(currentTab);
   }
@@ -46,6 +48,7 @@ function renderConfirm() {
   let modal = document.getElementById("myModal");
   if (!validateForm()) return;
   // Render first form
+
   if (currentTab == 0) {
     firstForm();
   } else if (currentTab == 1) {
@@ -111,6 +114,16 @@ function firstForm() {
   li.appendChild(val);
   confirmCheck.appendChild(li);
 
+  // add to list
+  userData.age = age.value;
+  userData.sex = sex.options[sex.selectedIndex].value;
+  // Add score;
+  if (
+    (+temp.value > 37.5 && scale.value == "C") ||
+    (+temp.value > 99.5 && scale.value == "F")
+  ) {
+    score += 2;
+  }
   //   final render
   modal.style.display = "block";
 }
@@ -129,6 +142,12 @@ function renderCheckbox(name) {
     confirmCheck.innerHTML =
       "<p style ='color:#ed553b;'> You don't select any of symptoms</p>";
   } else {
+    if (name == "symptoms") {
+      score += (len - 1) * 1 + 2;
+    } else if (name == "ad-symptoms") {
+      score += len * 2;
+    }
+
     for (let i = 0; i < len; i++) {
       let li = document.createElement("li");
       let attr = document.createElement("p");
