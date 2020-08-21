@@ -1,7 +1,5 @@
 let currentTab;
 let tab = document.getElementsByClassName("tab");
-let prevBtn = document.getElementById("prevBtn");
-let nextBtn = document.getElementById("nextBtn");
 
 let confirmCheck = document.querySelector("#confirm-input ul");
 
@@ -11,19 +9,18 @@ window.onload = () => {
 };
 
 function showTab(n) {
-  tab[n].style.display = "block";
+  let nextBtn = document.getElementById("nextBtn");
+  if (n < tab.length) {
+    console.log(n);
+    tab[n].style.display = "block";
+  }
 
   //Button functionality
 
-  if (n == 0) {
-    prevBtn.style.display = "none";
-  } else {
-    prevBtn.style.display = "inline";
-  }
   if (n == tab.length - 1) {
     nextBtn.innerHTML = "Submit";
   } else {
-    nextBtn.innerHTML = "Next";
+    nextBtn.innerHTML = "Confirm";
   }
 }
 
@@ -34,18 +31,20 @@ function nextPrev(n) {
 
   currentTab = currentTab + n;
   // if you have reached the end of the form...
-  if (currentTab >= tab.length) {
+  if (currentTab == tab.length) {
     // ... the form gets submitted:
-    console.log(document.querySelectorAll("input[type=checkbox]:checked"));
+    document.getElementById("user-input-form").submit();
+    console.log("All are ok");
+  } else if (currentTab < tab.length) {
+    showTab(currentTab);
   }
   // Otherwise, display the correct tab:
-  showTab(currentTab);
 }
 
 function renderConfirm() {
   let editBtn = document.getElementById("editBtn");
   let modal = document.getElementById("myModal");
-
+  if (!validateForm()) return;
   // Render first form
   if (currentTab == 0) {
     firstForm();
@@ -126,15 +125,43 @@ function renderCheckbox(name) {
   let len = checkList.length;
 
   confirmCheck.innerHTML = "<h3>Selected health problems you feel.</h3>";
-  for (let i = 0; i < len; i++) {
-    let li = document.createElement("li");
-    let attr = document.createElement("p");
-    let val = document.createElement("p");
+  if (len == 0) {
+    confirmCheck.innerHTML =
+      "<p style ='color:#ed553b;'> You don't select any of symptoms</p>";
+  } else {
+    for (let i = 0; i < len; i++) {
+      let li = document.createElement("li");
+      let attr = document.createElement("p");
+      let val = document.createElement("p");
 
-    attr.innerText = i + 1 + " " + checkList[i].value;
-    li.appendChild(attr);
-    confirmCheck.appendChild(li);
+      attr.innerText = i + 1 + " " + checkList[i].value;
+      li.appendChild(attr);
+      confirmCheck.appendChild(li);
+    }
+  }
+  modal.style.display = "block";
+}
+
+// validate form
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  let x,
+    y,
+    i,
+    valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false:
+      valid = false;
+    }
   }
 
-  modal.style.display = "block";
+  return valid; // return the valid status
 }

@@ -49,7 +49,7 @@
                 </ul>
                 <div class="btn-group" id="input-conf" style="overflow:auto;">
                     <div style="float:right;">
-                        <button type="button" id="editBtn" onclick="nextPrev(1)">Edit</button>
+                        <button type="button" id="editBtn">Edit</button>
                         <button type="button" id="nextBtn" onclick="nextPrev(1)">Confirm</button>
                     </div>
                 </div>
@@ -135,44 +135,44 @@
                 </div>
                 <div class="input-container">
                     <div class="check-box">
-                        <input type="checkbox" name="ad-symptoms" value="Abdominal Pain">
-                        <label>Abdominal Pain</label>
+                        <input type="checkbox" name="ad-symptoms" id="abd-pain" value="Abdominal Pain">
+                        <label for="abd-pain">Abdominal Pain</label>
                     </div>
 
                     <div class="check-box">
-                        <input type="checkbox" name="ad-symptoms" value="Vomiting">
-                        <label>Vomiting</label>
+                        <input type="checkbox" name="ad-symptoms" id="vomiting" value="Vomiting">
+                        <label for="vomiting">Vomiting</label>
                     </div>
 
                     <div class="check-box">
-                        <input type="checkbox" name="ad-symptoms" value="Diarrhoea">
-                        <label>Diarrhoea</label>
+                        <input type="checkbox" name="ad-symptoms" id="diarrhoea" value="Diarrhoea">
+                        <label for="diarrhoea">Diarrhoea</label>
                     </div>
 
                     <div class="check-box">
-                        <input type="checkbox" name="ad-symptoms" value="Chest pain or pressure">
-                        <label>Chest pain or pressure</label>
+                        <input type="checkbox" name="ad-symptoms" id="cheast-pain" value="Chest pain or pressure">
+                        <label for="cheast-pain">Chest pain or pressure</label>
                     </div>
 
                     <div class="check-box">
-                        <input type="checkbox" name="ad-symptoms" value="Muscle pain">
-                        <label> Muscle pain</label>
+                        <input type="checkbox" name="ad-symptoms" id="mclPain" value="Muscle pain">
+                        <label for="mclPain"> Muscle pain</label>
                     </div>
 
                     <div class="check-box">
-                        <input type="checkbox" name="ad-symptoms" value="Loss of taste or smell">
-                        <label> Loss of taste or smell</label>
+                        <input type="checkbox" name="ad-symptoms" id="taste" value="Loss of taste or smell">
+                        <label for="taste"> Loss of taste or smell</label>
                     </div>
 
                     <div class="check-box">
-                        <input type="checkbox" name="ad-symptoms"
+                        <input type="checkbox" id="rash" name=" ad-symptoms"
                             value="Rash on skin, or discoloration of fingers or toes">
-                        <label> Rash on skin, or discoloration of fingers or toes</label>
+                        <label for="rash"> Rash on skin, or discoloration of fingers or toes</label>
                     </div>
 
                     <div class="check-box">
-                        <input type="checkbox" name="ad-symptoms" value="Loss of speech or movement">
-                        <label> Loss of speech or movement</label>
+                        <input type="checkbox" name="ad-symptoms" id="spLoss" value="Loss of speech or movement">
+                        <label for="spLoss"> Loss of speech or movement</label>
                     </div>
                 </div>
             </div>
@@ -181,7 +181,7 @@
             <!-- Button -->
             <div class="btn-group" style="overflow:auto;">
                 <div style="float:right;">
-                    <button type="button" id="nextBtn" onclick="renderConfirm()">Next</button>
+                    <button type="button" id="confBtn" onclick="renderConfirm()">Next</button>
                 </div>
             </div>
         </form>

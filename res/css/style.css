@@ -241,6 +241,7 @@ header h1:hover {
   display: flex;
   justify-content: space-between;
   padding-left: 3rem;
+  text-align: left;
 }
 #confirm-input p {
   display: inline-block;
