@@ -326,9 +326,10 @@ button:hover {
 /* ================ */
 #review {
   display: none;
+
   background: #ffffff;
-  margin-top: 5rem;
-  width: 100%;
+  margin: 5rem auto;
+  min-width: 50%;
   height: auto;
   border-radius: 0.5rem;
   text-align: left;
@@ -353,8 +354,6 @@ button:hover {
 }
 
 #review ul li {
-  display: flex;
-  justify-content: space-between;
   padding: 0 3rem;
   text-align: left;
 }
@@ -362,4 +361,11 @@ button:hover {
 #review p {
   display: inline-block;
   margin-top: 1rem;
+}
+
+#symp p::before {
+  font-family: FontAwesome;
+  content: "\f046";
+  padding-right: 0.5rem;
+  color: #88f749;
 }

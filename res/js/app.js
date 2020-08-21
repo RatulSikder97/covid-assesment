@@ -3,6 +3,7 @@ let tab = document.getElementsByClassName("tab");
 let confirmCheck = document.querySelector("#confirm-input ul");
 
 let userData = {};
+let sympData = {};
 
 let score = 0;
 window.onload = () => {
@@ -164,7 +165,7 @@ function renderCheckbox(name) {
       confirmCheck.appendChild(li);
 
       // add symptoms
-      userData[`symp_${checkList[i].id}`] = checkList[i].value;
+      sympData[`symp_${checkList[i].id}`] = checkList[i].value;
     }
   }
 
@@ -220,11 +221,14 @@ function validateForm() {
 function renderReview() {
   // render basic
   basicInfo();
+  // render symptoms
+  sympInfo();
 }
 
 function basicInfo() {
   let basic = document.querySelector("#basic ul");
 
+  basic.innerHTML = "";
   // paint age
   let li = document.createElement("li");
   let attr = document.createElement("p");
@@ -257,4 +261,26 @@ function basicInfo() {
   li.appendChild(attr);
   li.appendChild(val);
   basic.appendChild(li);
+}
+
+function sympInfo() {
+  let symp = document.querySelector("#symp ul");
+
+  symp.innerHTML = "";
+  // paint age
+  let li = "";
+  let attr = "";
+  let val = "";
+
+  let len = userData.length;
+  let cnt = 1;
+  for (let i in sympData) {
+    li = document.createElement("li");
+    val = document.createElement("p");
+    li.className = "symp-list";
+    val.innerText = " " + sympData[i];
+    li.appendChild(val);
+    symp.appendChild(li);
+    cnt++;
+  }
 }
