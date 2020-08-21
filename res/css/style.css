@@ -225,6 +225,11 @@ header h1:hover {
   padding: 0 2rem;
   border-radius: 0.5rem;
 }
+#confirm-input h3 {
+  text-align: left;
+  font-size: 2rem;
+  padding: 2rem 0;
+}
 #confirm-input ul {
   display: flex;
   width: 100%;
@@ -235,6 +240,7 @@ header h1:hover {
 #confirm-input ul li {
   display: flex;
   justify-content: space-between;
+  padding-left: 3rem;
 }
 #confirm-input p {
   display: inline-block;

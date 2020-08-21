@@ -45,7 +45,7 @@
             <div id="confirm-input">
                 <h2>Check Your Input</h2>
                 <ul>
-
+                    <li>here</li>
                 </ul>
                 <div class="btn-group" id="input-conf" style="overflow:auto;">
                     <div style="float:right;">
@@ -81,9 +81,9 @@
 
                     <!-- temp radio -->
                     <div class="temp-scale">
-                        <input type="radio" name="scale" id="c" value="c" checked="checked">
+                        <input type="radio" name="scale" id="c" value="C" checked="checked">
                         <label for="c">°C</label>
-                        <input type="radio" name="scale" id="f" value="f">
+                        <input type="radio" name="scale" id="f" value="F">
                         <label for="f">°F</label>
                     </div>
                 </div>
@@ -98,28 +98,28 @@
                 </div>
                 <div class="input-container">
                     <div class="check-box">
-                        <input type="checkbox" name="symptoms" id="breath-prob">
+                        <input type="checkbox" name="symptoms" id="breath-prob" value="Breathing Problem">
                         <label for="breath-prob">Breathing Problem</label>
 
                     </div>
 
                     <div class="check-box">
-                        <input type="checkbox" name="symptoms" id="dry-cough">
+                        <input type="checkbox" name="symptoms" id="dry-cough" value="Dry Cough">
                         <label for="dry-cough">Dry Cough</label>
                     </div>
 
                     <div class="check-box">
-                        <input type="checkbox" name="symptoms" id="sore-throat">
+                        <input type="checkbox" name="symptoms" id="sore-throat" value="Sore Throat">
                         <label for="sore-throat">Sore Throat</label>
                     </div>
 
                     <div class="check-box">
-                        <input type="checkbox" name="symptoms" id="weekness">
+                        <input type="checkbox" name="symptoms" id="weekness" value="Weekness">
                         <label for="weekness">Weekness</label>
                     </div>
 
                     <div class="check-box">
-                        <input type="checkbox" name="symptoms" id="runny-nose">
+                        <input type="checkbox" name="symptoms" id="runny-nose" value="Runny Nose">
                         <label for="runny-nose">Runny Nose</label>
                     </div>
 
@@ -135,42 +135,43 @@
                 </div>
                 <div class="input-container">
                     <div class="check-box">
-                        <input type="checkbox" name="ad-symptoms">
+                        <input type="checkbox" name="ad-symptoms" value="Abdominal Pain">
                         <label>Abdominal Pain</label>
                     </div>
 
                     <div class="check-box">
-                        <input type="checkbox" name="ad-symptoms">
+                        <input type="checkbox" name="ad-symptoms" value="Vomiting">
                         <label>Vomiting</label>
                     </div>
 
                     <div class="check-box">
-                        <input type="checkbox" name="ad-symptoms">
+                        <input type="checkbox" name="ad-symptoms" value="Diarrhoea">
                         <label>Diarrhoea</label>
                     </div>
 
                     <div class="check-box">
-                        <input type="checkbox" name="ad-symptoms">
+                        <input type="checkbox" name="ad-symptoms" value="Chest pain or pressure">
                         <label>Chest pain or pressure</label>
                     </div>
 
                     <div class="check-box">
-                        <input type="checkbox" name="ad-symptoms">
+                        <input type="checkbox" name="ad-symptoms" value="Muscle pain">
                         <label> Muscle pain</label>
                     </div>
 
                     <div class="check-box">
-                        <input type="checkbox" name="ad-symptoms">
+                        <input type="checkbox" name="ad-symptoms" value="Loss of taste or smell">
                         <label> Loss of taste or smell</label>
                     </div>
 
                     <div class="check-box">
-                        <input type="checkbox" name="ad-symptoms">
+                        <input type="checkbox" name="ad-symptoms"
+                            value="Rash on skin, or discoloration of fingers or toes">
                         <label> Rash on skin, or discoloration of fingers or toes</label>
                     </div>
 
                     <div class="check-box">
-                        <input type="checkbox" name="ad-symptoms">
+                        <input type="checkbox" name="ad-symptoms" value="Loss of speech or movement">
                         <label> Loss of speech or movement</label>
                     </div>
                 </div>
@@ -180,7 +181,7 @@
             <!-- Button -->
             <div class="btn-group" style="overflow:auto;">
                 <div style="float:right;">
-                    <button type="button" id="nextBtn" onclick="renderConfirm()">Confirm</button>
+                    <button type="button" id="nextBtn" onclick="renderConfirm()">Next</button>
                 </div>
             </div>
         </form>
