@@ -326,10 +326,10 @@ button:hover {
 /* ================ */
 #review {
   display: none;
-
+  text-transform: capitalize;
   background: #ffffff;
   margin: 5rem auto;
-  min-width: 50%;
+  min-width: 70%;
   height: auto;
   border-radius: 0.5rem;
   text-align: left;
@@ -358,9 +358,38 @@ button:hover {
   text-align: left;
 }
 
+#basic ul li p:first-child {
+  font-weight: 700;
+}
+
+#basic ul li:nth-child(1) p:first-child:before {
+  font-family: FontAwesome;
+  content: "\f073";
+  padding-right: 1rem;
+  color: #49e3f7;
+  font-weight: 600;
+}
+
+#basic ul li:nth-child(2) p:first-child:before {
+  font-family: FontAwesome;
+  content: "\f228";
+  padding-right: 1rem;
+  color: #1de659;
+  font-weight: 600;
+}
+
+#basic ul li:nth-child(3) p:first-child:before {
+  font-family: FontAwesome;
+  content: "\f2cb";
+  padding-right: 1rem;
+  color: #f76c49;
+  font-weight: 600;
+}
+
 #review p {
   display: inline-block;
   margin-top: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 #symp p::before {
@@ -368,4 +397,5 @@ button:hover {
   content: "\f046";
   padding-right: 0.5rem;
   color: #88f749;
+  font-weight: 600;
 }
