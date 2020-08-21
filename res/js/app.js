@@ -6,6 +6,8 @@ let userData = {};
 let sympData = {};
 
 let score = 0;
+let covidStatus;
+
 window.onload = () => {
   currentTab = 0;
   showTab(currentTab);
@@ -150,7 +152,7 @@ function renderCheckbox(name) {
       "<p style ='color:#ed553b;'> You don't select any of symptoms</p>";
   } else {
     if (name == "symptoms") {
-      score += (len - 1) * 1 + 2;
+      score += (len - 1) * 1 + 3;
     } else if (name == "ad-symptoms") {
       score += len * 2;
     }
@@ -193,11 +195,11 @@ function validateForm() {
       // add an "invalid" class to the field:
       if (y[i].id == "age") {
         y[i].className += " invalid";
-        ageWarn.style.display = "inline-block";
+        ageWarn.style.display = "block";
       } else if (y[i].id == "temp") {
         y[i].className += " invalid";
         tempWarn.style.display = "none";
-        tempWarn.style.display = "inline-block";
+        tempWarn.style.display = "block";
       }
 
       // and set the current valid status to false:
@@ -283,4 +285,40 @@ function sympInfo() {
     symp.appendChild(li);
     cnt++;
   }
+}
+
+function genReport() {
+  let review = document.getElementById("review");
+  let report = document.getElementById("report");
+  let sc = userData.score;
+  review.style.display = "none";
+  report.style.display = "inline-block";
+
+  console.log(sc);
+  if (sc < 5) {
+    document.getElementById("l-5").style.display = "inline-block";
+    covidStatus = "Negetive";
+  } else if (sc == 5) {
+    document.getElementById("eq-5").style.display = "inline-block";
+    covidStatus = "Positive";
+  } else if (sc > 5 && sc < 7) {
+    covidStatus = "Positive";
+
+    document.getElementById("g-5-l-7").style.display = "inline-block";
+  } else if (sc >= 7) {
+    covidStatus = "Positive";
+    document.getElementById("g-7").style.display = "inline-block";
+  }
+  // add covid status
+  userData.covid = covidStatus;
+
+  // add date
+  let today = new Date();
+  let day = String(today.getDate()).padStart(2, "0");
+  let month = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+  let year = today.getFullYear();
+
+  today = year + "/" + month + "/" + day;
+
+  userData.assesDay = today;
 }

@@ -56,25 +56,7 @@
             </div>
         </div>
 
-        <!-- start review section -->
-        <div id="review">
-            <h2>Your Inforamtion</h2>
-            <div id="basic">
-                <h3>Basic Information:</h3>
-                <ul>
 
-                </ul>
-            </div>
-            <div id="symp">
-                <h3>Selected symptoms you feel:</h3>
-                <ul>
-
-                </ul>
-
-            </div>
-            <button id="proceed" href="#" class="btn">Proceed</button>
-        </div>
-        <!-- End review section -->
 
         <form action="report.html" method="post" id="user-input-form">
             <!-- Bsic inforamtion -->
@@ -210,6 +192,166 @@
                 </div>
             </div>
         </form>
+        <!-- start review section -->
+        <div id="review">
+            <h2>Your Inforamtion</h2>
+            <div id="basic">
+                <h3>Basic Information:</h3>
+                <ul>
+
+                </ul>
+            </div>
+            <div id="symp">
+                <h3>Selected symptoms you feel:</h3>
+                <ul>
+
+                </ul>
+
+            </div>
+            <button id="proceed" href="#" class="btn" onclick="genReport()">Proceed</button>
+        </div>
+        <!-- End review section -->
+
+        <!-- Start report section -->
+        <div id="report">
+            <h2>Your Report</h2>
+            <!-- score less than 5 -->
+            <div id="l-5">
+                <p class="declare" style="border-color: #1de659;"><i style="color: #1de659;"
+                        class="fa fa-check-circle-o" aria-hidden="true"></i> You have merely chance to get
+                    affected by COVID-19.</p>
+                <div class="advices">
+                    <h3>Advices:</h3>
+                    <ul>
+                        <li><i class="fa fa-hand-o-right" aria-hidden="true"></i> Pataint should stay in Isolation.</li>
+                        <li><i class="fa fa-hand-o-right" aria-hidden="true"></i>Contact with doctor and follow advice.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end less than 5section -->
+
+            <!-- ===================== -->
+            <!-- score>=5 and 5<score<7 -->
+            <!-- ===================== -->
+            <!-- score == 5 -->
+            <div id="eq-5">
+                <p class="declare" style="border-color: #dbdf21;"><i style="color: #dbdf21;"
+                        class="fa fa-check-circle-o" aria-hidden="true"></i> Possible suspected case for COVID-19
+                    affected. </p>
+                <div class="advices">
+                    <h3>Advices:</h3>
+                    <ul>
+                        <li>
+                            <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                            Pataint should stay in Isolation.
+                        </li>
+                        <li>
+                            <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                            Contact with doctor and follow advice.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end score==5 -->
+
+            <!--start 5<score<7 -->
+            <div id="g-5-l-7">
+                <p class="declare" style="border-color: #e6a902;">
+                    <i style="color: #e6a902;" class="fa fa-bell" aria-hidden="true"></i>
+                    You have chance of COVID-19 affected. </p>
+                <div class="advices">
+                    <h3>Advices:</h3>
+                    <ul>
+                        <li>
+                            <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                            Pataint should stay in Isolation.
+                        </li>
+                        <li>
+                            <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                            Contact with doctor immediately and follow advice.
+                        </li>
+
+                        <!-- contact no -->
+                        <li><i class="fa fa-address-book-o" aria-hidden="true"></i> Hotlines:
+                            <div class="emergency">
+                                <p><i class="fa fa-phone" aria-hidden="true"></i>
+                                    <b>National Call Center:</b> 333
+                                </p>
+
+                                <p><i class="fa fa-phone" aria-hidden="true"></i>
+                                    <b>Health Portal:</b> 16263
+                                </p>
+                                <p><i class="fa fa-phone" aria-hidden="true"></i>
+                                    <b>IEDCR:</b> 10655
+                                </p>
+                                <p><i class="fa fa-phone" aria-hidden="true"></i>
+                                    <b>Specialist Health Line:</b> 019611677777
+                                </p>
+                                <p><i class="fa fa-phone" aria-hidden="true"></i>
+                                    <b>National Helpline:</b> 109
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end 5<score<7 section -->
+
+            <!--start score>7 -->
+            <div id="g-7">
+                <p class="declare" style="border-color: #e63946;"><i style="color: #eb0f21;"
+                        class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                    Almost confirmed case of COVID-19 positive. </p>
+                <div class="advices">
+                    <h3>Advices:</h3>
+                    <ul>
+                        <li>
+                            <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                            Pataint should stay in Isolation.
+                        </li>
+                        <li>
+                            <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                            Contact with doctor immediately and follow advice.
+                        </li>
+                        <li style="color: #e63946; font-weight: 600;">
+                            <i style="color: #e63946;" class=" fa fa-bell-o" aria-hidden="true"></i>
+                            Patient should be hospitalized.
+                        </li>
+
+
+                        <!-- contact no -->
+                        <li><i class="fa fa-address-book-o" aria-hidden="true"></i> Hotlines:
+                            <div class="emergency">
+                                <p><i class="fa fa-phone" aria-hidden="true"></i>
+                                    <b>National Call Center:</b> 333
+                                </p>
+
+                                <p><i class="fa fa-phone" aria-hidden="true"></i>
+                                    <b>Health Portal:</b> 16263
+                                </p>
+                                <p><i class="fa fa-phone" aria-hidden="true"></i>
+                                    <b>IEDCR:</b> 10655
+                                </p>
+                                <p><i class="fa fa-phone" aria-hidden="true"></i>
+                                    <b>Specialist Health Line:</b> 019611677777
+                                </p>
+                                <p><i class="fa fa-phone" aria-hidden="true"></i>
+                                    <b>National Helpline:</b> 109
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end g-7 section -->
+
+            <div class="btn-group" style="float: right;">
+                <a href="index.html" class="btn">Go Home</a>
+                <a href="selfAsses.html" class="btn">Check Again</a>
+            </div>
+        </div>
+        <!-- End report section -->
     </div>
 
     <div class="footer">
