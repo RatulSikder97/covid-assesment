@@ -80,7 +80,8 @@ header h1:hover {
   background: #0466c8;
   padding: 1.6rem 2rem;
   border-radius: 0.5rem;
-  margin-top: 5rem;
+  margin: 5rem 2rem;
+  margin-bottom: 2rem;
 }
 
 .btn:hover {
@@ -132,6 +133,7 @@ header h1:hover {
   background: #f2f3f0;
   border-radius: 0.5rem;
   text-align: left;
+  user-select: none;
 }
 
 .form-header {
@@ -174,7 +176,7 @@ header h1:hover {
   height: 4rem;
   padding: 0 2rem;
   border-radius: 0.5rem;
-  border: 0.1rem solid #000;
+  border: 0.1rem solid #aaa;
 }
 
 .input-container input[type="text"]:focus,
@@ -185,17 +187,20 @@ header h1:hover {
     0.2rem -0.2rem 0.4rem #4caf50, -0.2rem -0.2rem 0.4rem #4caf50;
 }
 
-.input-container input:hover {
+.input-container input:hover,
+.input-container select:hover {
   border: none;
   box-shadow: 0.2rem 0.2rem 0.4rem #4caf50, -0.2rem 0.2rem 0.4rem #4caf50,
     0.2rem -0.2rem 0.4rem #4caf50, -0.2rem -0.2rem 0.4rem #4caf50;
 }
 .main-content select {
+  outline: none;
   display: block;
   height: 4rem;
   width: 30%;
   font-size: 1.8rem;
   border-radius: 0.5rem;
+  border: 0.1rem solid #aaa;
 }
 
 #temp {
@@ -222,13 +227,18 @@ header h1:hover {
   background: rgb(255, 255, 255);
   z-index: 9999;
   width: 80%;
-  padding: 0 2rem;
   border-radius: 0.5rem;
+}
+#confirm-input h2 {
+  padding: 2rem 0;
+  background: #f2f3f0;
+  border-radius: 0.5rem;
+  font-size: 2.5rem;
 }
 #confirm-input h3 {
   text-align: left;
   font-size: 2rem;
-  padding: 2rem 0;
+  padding: 2rem 2rem 0.5rem;
 }
 #confirm-input ul {
   display: flex;
@@ -240,7 +250,7 @@ header h1:hover {
 #confirm-input ul li {
   display: flex;
   justify-content: space-between;
-  padding-left: 3rem;
+  padding: 0 3rem;
   text-align: left;
 }
 #confirm-input p {
@@ -262,9 +272,18 @@ header h1:hover {
 }
 
 input.invalid {
-  background-color: #ffdddd;
-  box-shadow: 0.2rem 0.2rem 0.4rem #ffdddd, -0.2rem 0.2rem 0.4rem #ffdddd,
-    0.2rem -0.2rem 0.4rem #ffdddd, -0.2rem -0.2rem 0.4rem #ffdddd;
+  box-shadow: 0.2rem 0.2rem 0.5rem #eb9090, -0.2rem 0.2rem 0.4rem #eb9090,
+    0.2rem -0.2rem 0.4rem #eb9090, -0.2rem -0.2rem 0.4rem #eb9090;
+}
+
+/* warning msg */
+#temp-report,
+#age-report {
+  display: none;
+  font-size: 1.6rem;
+  font-style: italic;
+  margin: 0;
+  color: #f53939;
 }
 
 button {
@@ -280,10 +299,6 @@ button {
 
 button:hover {
   opacity: 0.8;
-}
-
-#prevBtn {
-  background-color: #bbbbbb;
 }
 
 .btn-group {
@@ -304,4 +319,47 @@ button:hover {
 .check-box {
   margin: 2rem 0;
   margin-left: 4rem;
+}
+
+/* ================= */
+/* review section */
+/* ================ */
+#review {
+  display: none;
+  background: #ffffff;
+  margin-top: 5rem;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  text-align: left;
+}
+
+#basic,
+#symp {
+  padding: 2rem 2rem;
+}
+#review h2 {
+  background: #4caf50;
+  padding: 2rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+#review h3 {
+  font-size: 2rem;
+}
+
+#review button {
+  float: right;
+}
+
+#review ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3rem;
+  text-align: left;
+}
+
+#review p {
+  display: inline-block;
+  margin-top: 1rem;
 }

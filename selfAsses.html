@@ -56,11 +56,25 @@
             </div>
         </div>
 
-        <!-- start report section -->
-        <div class="report">
+        <!-- start review section -->
+        <div id="review">
+            <h2>Your Inforamtion</h2>
+            <div id="basic">
+                <h3>Basic Information:</h3>
+                <ul>
 
+                </ul>
+            </div>
+            <div id="symp">
+                <h3>Selected symptoms you feel:</h3>
+                <ul>
+
+                </ul>
+
+            </div>
+            <button id="proceed" href="#" class="btn">Proceed</button>
         </div>
-        <!-- End report section -->
+        <!-- End review section -->
 
         <form action="report.html" method="post" id="user-input-form">
             <!-- Bsic inforamtion -->
@@ -71,7 +85,8 @@
                 </div>
                 <div class="input-container">
                     <label for="age">Age</label>
-                    <input type="number" name="Age" id="age">
+                    <input type="number" name="Age" id="age" placeholder="Enter your age">
+                    <p id="age-report">Please Enter your age</p>
                 </div>
                 <div class="input-container">
                     <label for="sex">Sex</label>
@@ -84,7 +99,8 @@
 
                 <div class="input-container">
                     <label for="body-temp">Body Temparature</label>
-                    <input type="text" name="Body Temparature" id="temp">
+                    <input type="text" name="Body Temparature" id="temp"
+                        placeholder="Enter your current body temparature...">
 
                     <!-- temp radio -->
                     <div class="temp-scale">
@@ -93,6 +109,7 @@
                         <input type="radio" name="scale" id="f" value="F">
                         <label for="f">°F</label>
                     </div>
+                    <p id="temp-report">Please Enter your body temparature</p>
                 </div>
 
             </div>
@@ -172,10 +189,11 @@
                     </div>
 
                     <div class="check-box">
-                        <input type="checkbox" id="rash" name=" ad-symptoms"
+                        <input type="checkbox" name="ad-symptoms" id="r"
                             value="Rash on skin, or discoloration of fingers or toes">
-                        <label for="rash"> Rash on skin, or discoloration of fingers or toes</label>
+                        <label for="r"> Rash on skin, or discoloration of fingers or toes</label>
                     </div>
+
 
                     <div class="check-box">
                         <input type="checkbox" name="ad-symptoms" id="spLoss" value="Loss of speech or movement">
