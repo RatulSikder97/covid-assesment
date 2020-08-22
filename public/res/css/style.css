@@ -549,6 +549,7 @@ table {
   width: 100%;
   font-size: 1.6rem;
   border-collapse: collapse;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 table,
@@ -570,4 +571,17 @@ table tr:nth-child(odd) td:nth-child(even) {
 
 table tr:nth-child(even) td:nth-child(odd) {
   background: #e7e6e6;
+}
+
+table tr:last-child {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+/* hint */
+#hint {
+  padding: 1rem;
+  background: #ddbe10;
+}
+#hint span {
+  color: #1de659;
 }
