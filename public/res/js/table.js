@@ -3,6 +3,7 @@
 // *********************************
 
 window.onload = function () {
+  let hint = document.getElementById("hint");
   db.collection("user-info")
     .orderBy("key", "desc")
     .get()
@@ -10,6 +11,9 @@ window.onload = function () {
       let cnt = 1;
       snapshot.docs.forEach((data) => {
         let userInfo = data.data();
+        if (userInfo.length == 0) {
+          hint.style.display = "inline-block";
+        }
         renderTable(userInfo, cnt);
         cnt++;
       });
