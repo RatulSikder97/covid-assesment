@@ -18,6 +18,7 @@ window.onload = function () {
 };
 
 function renderTable(data, cnt) {
+  // report table
   let table = document.getElementById("reportTab");
   let tr = document.createElement("tr");
 
