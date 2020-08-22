@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,14 +9,15 @@
 
 html {
   font-size: 62.5%;
+  font-family: "Alegreya", serif;
 }
 
 /* ======================== */
 /* Header Style */
 /* ======================== */
 
-header {
-  background: #577590;
+.header {
+  background: #5e8ad3;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,29 +25,69 @@ header {
   width: 100%;
   text-transform: capitalize;
   color: #fff;
+  box-shadow: inset 0.2rem 0.2rem 0.4rem #577590;
+  border-bottom: 0.2rem solid #0859ab;
+  border-top: 0.2rem solid #0859ab;
 }
 
 .logo a {
-  color: #000;
+  color: #fff;
   font-size: 2.2rem;
   font-weight: 600;
   display: inline-block;
 }
-.logo a:hover {
-  color: #8efcaf;
+.logo a:hover,
+.logo a:hover i {
+  color: #000000;
 }
 
 .logo > a > i {
   font-size: 5rem;
   display: inline-block;
   margin: 0.5rem 0.5rem;
-  color: #74ffd5;
+  color: #ffffff;
   margin-left: 2rem;
 }
 
 .logo a span {
   display: inline-block;
   padding: 0.4rem 0.3rem;
+}
+
+/* navigation section */
+.nav {
+  height: 100%;
+  margin-right: 4rem;
+}
+
+.nav ul {
+  display: flex;
+  height: 100%;
+  font-size: 1.8rem;
+}
+
+.nav ul li {
+  height: 100%;
+  border-left: 0.1rem solid #007c72;
+}
+
+.nav ul li:last-child {
+  border-right: 0.1rem solid #007c72;
+}
+.nav ul li a {
+  color: #fff;
+  font-weight: 600;
+  display: inline-block;
+  padding: 2rem 3rem;
+}
+
+.nav li a i {
+  padding-right: 1rem;
+}
+
+.nav li a:hover {
+  color: #000;
+  background: #84c1ff;
 }
 
 /* ================= */
@@ -457,4 +499,53 @@ button:hover {
 #g-7 {
   display: none;
   width: 100%;
+}
+
+/* =========== */
+/* table */
+/* =========== */
+
+.report-table {
+  display: inline-block;
+  text-transform: capitalize;
+  background: #ffffff;
+  margin: 5rem auto;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.report-table h2 {
+  background: #1de659;
+  text-align: center;
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 1.5rem 0;
+}
+
+table {
+  width: 100%;
+  font-size: 1.6rem;
+  border-collapse: collapse;
+}
+
+table,
+th {
+  border: 0.1rem solid rgb(231, 231, 231);
+}
+
+table th {
+  height: 5rem;
+}
+td {
+  font-size: 1.7rem;
+  font-weight: 500;
+  padding: 0.5rem;
+}
+table tr:nth-child(odd) td:nth-child(even) {
+  background: #e7e6e6;
+}
+
+table tr:nth-child(even) td:nth-child(odd) {
+  background: #e7e6e6;
 }
