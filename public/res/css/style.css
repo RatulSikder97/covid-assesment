@@ -580,6 +580,8 @@ table tr:last-child {
 /* hint */
 #hint {
   padding: 1rem;
+  width: fit-content;
+  margin-top: 1rem;
   background: #ddbe10;
 }
 #hint span {
