@@ -581,9 +581,9 @@ table tr:last-child {
 #hint {
   padding: 1rem;
   width: fit-content;
-  margin-top: 1rem;
+
   background: #ddbe10;
 }
 #hint span {
-  color: #1de659;
+  color: #3f7e52;
 }
