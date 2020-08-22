@@ -162,7 +162,7 @@ function renderCheckbox(name) {
       let attr = document.createElement("p");
       let val = document.createElement("p");
 
-      attr.innerText = i + 1 + " " + checkList[i].value;
+      attr.innerText = " " + checkList[i].value;
       li.appendChild(attr);
       confirmCheck.appendChild(li);
 

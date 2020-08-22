@@ -1,3 +1,10 @@
+/* at 980 */
+@media screen and (max-width: 980px) {
+  .main-content h2 {
+    font-size: 3.5rem;
+  }
+}
+
 /* At screen width 768 */
 @media screen and (max-width: 768px) {
   html {
@@ -42,7 +49,7 @@
     flex-direction: column;
   }
 
-  .desclaimer {
+  .disclaimer {
     width: 100%;
   }
   .desclaimer h3 {
@@ -65,7 +72,51 @@
   .content {
     width: 80%;
   }
+
+  .main-content h2 {
+    font-size: 2.8rem;
+  }
+  .main-content p {
+    font-weight: 400;
+    font-size: 1.8rem;
+  }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 480px) {
+  /* desclaimer */
+  .desclaimer h3 {
+    font-size: 1.8rem;
+  }
+  .disclaimer p {
+    font-size: 1.5rem;
+  }
+  .self {
+    font-size: 1.6rem;
+  }
+
+  /* temp scale */
+  .temp-scale {
+    display: block;
+    margin-top: 1rem;
+  }
+  #temp {
+    width: 100%;
+  }
+  /* report table */
+  table {
+    font-size: 1.4rem;
+  }
+
+  th,
+  td {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 50.5%;
+  }
 }

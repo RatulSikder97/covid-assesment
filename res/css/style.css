@@ -257,6 +257,7 @@ html {
   font-size: 1.8rem;
   border-radius: 0.5rem;
   border: 0.1rem solid #aaa;
+  background: #fff;
   font-weight: 500;
 }
 
@@ -272,6 +273,7 @@ html {
 
 .temp-scale label {
   display: inline-block;
+  padding-right: 1rem;
 }
 
 /* inputconfirm section */
@@ -310,6 +312,13 @@ html {
   padding: 0 3rem;
   text-align: left;
 }
+#confirm-input ul li p:first-child::before {
+  font-family: FontAwesome;
+  content: "\f046";
+  padding-right: 0.5rem;
+  color: #ddbe10;
+  font-weight: 500;
+}
 #confirm-input p {
   display: inline-block;
 }
@@ -318,7 +327,7 @@ html {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 9999; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -410,7 +419,7 @@ button:hover {
 
 #review h3 {
   font-size: 2rem;
-  padding-left: 4rem;
+  padding-left: 2rem;
 }
 
 #review button {
@@ -418,7 +427,7 @@ button:hover {
 }
 
 #review ul li {
-  padding: 0 5rem;
+  padding: 0 3rem;
   text-align: left;
 }
 
@@ -481,7 +490,7 @@ button:hover {
   background: rgb(243, 243, 243);
 }
 .advices {
-  padding: 2rem 4rem;
+  padding: 2rem 3rem;
 }
 
 .advices h3 {
@@ -499,7 +508,7 @@ button:hover {
 }
 
 .emergency {
-  padding-left: 4rem;
+  padding-left: 2rem;
 }
 
 /* ===================== */
