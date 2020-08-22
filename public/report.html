@@ -52,20 +52,22 @@
     </div>
 
     <div class="main-content">
+        <div class="report-table">
+            <h2>All Report</h2>
+            <table id="reportTab">
+                <tr>
+                    <th>SI No.</th>
+                    <th>Age</th>
+                    <th>Sex</th>
+                    <th>Temparature</th>
+                    <th>Assessment Date</th>
+                    <th>Assessment Score</th>
+                    <th>COVID-19 Result</th>
+                </tr>
 
-        <div class="content">
-            <h2>Welcome to COVID-19 Self-Assessment System</h2>
-            <p class="description">
-                Here, Our application will help you identifying your COVID 19 status. Here few questions about your
-                health
-                status will be asked and give report about your status. Here you also get suggestions according to your
-                health condition.
-            </p>
-
-            <a href="/selfAsses.html" class="btn">
-                Start Self Assessment
-            </a>
+            </table>
         </div>
+
     </div>
 
     <div class="footer">
@@ -93,7 +95,6 @@
     <script src="/vendors/js/selectivizr.js"></script>
 
 
-
     <!-- firebase section -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="/__/firebase/7.19.0/firebase-app.js"></script>
@@ -107,7 +108,8 @@
 
     <!-- Resource JS -->
     <script src="/res/js/app.js"></script>
-    <script src="/res/js/backend.js"></script>
+    <script src="/res/js/table.js"></script>
+    <!-- <script src="/res/js/backend.js"></script> -->
 </body>
 
 </html>

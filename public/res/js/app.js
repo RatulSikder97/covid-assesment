@@ -8,6 +8,10 @@ let sympData = {};
 let score = 0;
 let covidStatus;
 
+// *******************
+// Firebase database var
+const db = firebase.firestore();
+
 window.onload = () => {
   currentTab = 0;
   showTab(currentTab);
@@ -318,7 +322,7 @@ function genReport() {
   let month = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
   let year = today.getFullYear();
 
-  today = year + "/" + month + "/" + day;
+  today = year + "-" + month + "-" + day;
 
   userData.assesDay = today;
 }

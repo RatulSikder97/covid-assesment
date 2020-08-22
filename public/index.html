@@ -52,40 +52,20 @@
     </div>
 
     <div class="main-content">
-        <div class="report-table">
-            <h2>All Report</h2>
-            <table>
-                <tr>
-                    <th>SI No.</th>
-                    <th>Age</th>
-                    <th>Sex</th>
-                    <th>Temparature</th>
-                    <th>Assessment Date</th>
-                    <th>Assessment Score</th>
-                    <th>COVID-19 Result</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>23</td>
-                    <td>Male</td>
-                    <td>34 C</td>
-                    <td>2020/3/3</td>
-                    <td>3</td>
-                    <td>Negetive</td>
-                </tr>
 
-                <tr>
-                    <td>1</td>
-                    <td>23</td>
-                    <td>Male</td>
-                    <td>34 C</td>
-                    <td>2020/3/3</td>
-                    <td>3</td>
-                    <td>Negetive</td>
-                </tr>
-            </table>
+        <div class="content">
+            <h2>Welcome to COVID-19 Self-Assessment System</h2>
+            <p class="description">
+                Here, Our application will help you identifying your COVID 19 status. Here few questions about your
+                health
+                status will be asked and give report about your status. Here you also get suggestions according to your
+                health condition.
+            </p>
+
+            <a href="/selfAsses.html" class="btn">
+                Start Self Assessment
+            </a>
         </div>
-
     </div>
 
     <div class="footer">
@@ -113,20 +93,21 @@
     <script src="/vendors/js/selectivizr.js"></script>
 
 
+
     <!-- firebase section -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="/__/firebase/7.19.0/firebase-app.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="/__/firebase/7.19.0/firebase-analytics.js"></script>
+    <script src="/__/firebase/7.19.0/firebase-firestore.js"></script>
 
     <!-- Initialize Firebase -->
     <script src="/__/firebase/init.js"></script>
 
     <!-- Resource JS -->
     <script src="/res/js/app.js"></script>
-    <script src="/res/js/backend.js"></script>
+    <!-- <script src="/res/js/backend.js"></script> -->
 </body>
 
 </html>
