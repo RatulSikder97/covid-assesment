@@ -3,7 +3,6 @@
 // ********************************
 
 // store to database(firestore)
-
 function storeInfo() {
   db.collection("user-info").add({
     age: userData.age,
@@ -17,12 +16,13 @@ function storeInfo() {
 }
 
 // *********************************
-// store key function
+// Key event for store  function
 // *********************************
-
 let storeKey = document.getElementById("proceed");
 
 storeKey.onclick = function () {
+  // Report generation
   genReport();
+  // Store data to firebase
   storeInfo();
 };

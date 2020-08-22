@@ -17,6 +17,11 @@ window.onload = () => {
   showTab(currentTab);
 };
 
+// *******************
+// Wizard cobtroll
+// *******************
+
+// paint tab and button text of modal windows controll
 function showTab(n) {
   let nextBtn = document.getElementById("nextBtn");
   if (n < tab.length) {
@@ -32,6 +37,11 @@ function showTab(n) {
   }
 }
 
+/***************************
+@Functions: 
+***tab number controll
+***User input review rendering
+ ************************/
 function nextPrev(n) {
   let modal = document.getElementById("myModal");
   let form = document.getElementById("user-input-form");
@@ -45,15 +55,16 @@ function nextPrev(n) {
   if (currentTab == tab.length) {
     userData.score = score;
     form.style.display = "none";
-    console.log(userData);
+    // console.log(userData);
     review.style.display = "inline-block";
     renderReview();
   } else if (currentTab < tab.length) {
     showTab(currentTab);
   }
-  // Otherwise, display the correct tab:
 }
 
+// Modal renderning
+// Funtionality: Render modal window for input confirmation
 function renderConfirm() {
   let editBtn = document.getElementById("editBtn");
   let modal = document.getElementById("myModal");
@@ -81,9 +92,17 @@ function renderConfirm() {
   };
 }
 
+/*
+First tab confirmation tab
+
+@Functions: 
+***Verify Age,Sex and Body temparature
+***Render first Modal
+***temparature checking and score calculation_1
+*/
+
 function firstForm() {
   //   Node Renderning
-  let editBtn = document.getElementById("editBtn");
   let modal = document.getElementById("myModal");
   confirmCheck.innerHTML = "";
 
@@ -140,9 +159,14 @@ function firstForm() {
   modal.style.display = "block";
 }
 
-// Render checkbox input
+/*
+@ Functions:
+***Render checkbox input to confirmation
+*** Render 2nd and 3rd tab confirm modal
+ */
+
 function renderCheckbox(name) {
-  let editBtn = document.getElementById("editBtn");
+  // let editBtn = document.getElementById("editBtn");
   let modal = document.getElementById("myModal");
 
   confirmCheck.innerHTML = "";
@@ -164,7 +188,6 @@ function renderCheckbox(name) {
     for (let i = 0; i < len; i++) {
       let li = document.createElement("li");
       let attr = document.createElement("p");
-      let val = document.createElement("p");
 
       attr.innerText = " " + checkList[i].value;
       li.appendChild(attr);
@@ -178,8 +201,7 @@ function renderCheckbox(name) {
   modal.style.display = "block";
 }
 
-// validate form
-
+// Form input validation
 function validateForm() {
   // This function deals with validation of the form fields
   let x,
@@ -189,6 +211,7 @@ function validateForm() {
 
   let ageWarn = document.getElementById("age-report");
   let tempWarn = document.getElementById("temp-report");
+
   x = document.getElementsByClassName("tab");
   y = x[currentTab].getElementsByTagName("input");
 
@@ -222,10 +245,9 @@ function validateForm() {
   return valid; // return the valid status
 }
 
-// Render review
-
+// Render review tab
 function renderReview() {
-  // render basic
+  // render basic info
   basicInfo();
   // render symptoms
   sympInfo();
@@ -291,6 +313,15 @@ function sympInfo() {
   }
 }
 
+/*
+@functions:
+*** score checking.Four condition
+      1. score < 5  
+      2. score==5
+      3. 5<score<7
+      4. score >=7
+ */
+// Report generation
 function genReport() {
   let review = document.getElementById("review");
   let report = document.getElementById("report");
@@ -298,7 +329,7 @@ function genReport() {
   review.style.display = "none";
   report.style.display = "inline-block";
 
-  console.log(sc);
+  // console.log(sc);
   if (sc < 5) {
     document.getElementById("l-5").style.display = "inline-block";
     covidStatus = "Negetive";
@@ -316,7 +347,7 @@ function genReport() {
   // add covid status
   userData.covid = covidStatus;
 
-  // add date
+  // add date to user-data
   let today = new Date();
   let day = String(today.getDate()).padStart(2, "0");
   let month = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!

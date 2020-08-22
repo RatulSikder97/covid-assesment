@@ -4,7 +4,7 @@
 
 window.onload = function () {
   db.collection("user-info")
-    .orderBy("key", "asc")
+    .orderBy("key", "desc")
     .get()
     .then((snapshot) => {
       let cnt = 1;
