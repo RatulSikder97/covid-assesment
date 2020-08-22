@@ -579,7 +579,7 @@ table tr:last-child {
 
 /* hint */
 #hint {
-  display: none;
+  display: inline-block;
   padding: 1rem;
   width: fit-content;
 
